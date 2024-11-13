@@ -3,14 +3,17 @@ import Logo from './Logo'
 import { RiSearchEyeLine } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
   return (
-   <header className='h-16 shadow-md'>
+   <header className='h-16 shadow-md bg-white'>
     <div className='h-full container mx-auto flex items-center px-4 justify-between'>
       <div >
-        <Logo />
+        <Link to={'/'}>
+           <Logo />
+        </Link>
       </div>
       <div className=' hidden sm:flex items-center w-full max-w-sm '>
         
@@ -33,9 +36,14 @@ const Header = () => {
           </div>
         </div>
         <div className='mr-3'>
-          <button className='bg-green-300 px-3 py-1 rounded-full transform hover:scale-105 transition-transform duration-200 ease-in-out hover:font-bold'>
-            Login
-          </button>
+          <Link to={'login'}>
+          <span>
+            <button className='bg-green-300 px-3 py-1 rounded-full hover:scale-110 transition-all hover:font-bold'>
+                Login
+            </button>
+
+          </span>
+          </Link>
         </div>
 
       </div>
